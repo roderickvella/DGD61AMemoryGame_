@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://breste1vcx5nm"]
+
+[ext_resource type="Texture2D" uid="uid://tamh7lxa35v1" path="res://images/background.png" id="1_7ga4g"]
+[ext_resource type="Script" path="res://card/card.gd" id="2_xuvts"]
+
+[node name="Card" type="TextureButton"]
+texture_normal = ExtResource("1_7ga4g")
+script = ExtResource("2_xuvts")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
