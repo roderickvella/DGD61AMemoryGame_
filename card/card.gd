@@ -7,9 +7,8 @@ var is_flipped = false #flag to check if the card is flipped
 var is_clickable =true #flag to control if the card can be clicked
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-	#render_card()
+func _ready():	
+	render_card()
 
 func render_card():
 	if(is_flipped):		
