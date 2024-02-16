@@ -8,10 +8,11 @@ var is_clickable =true #flag to control if the card can be clicked
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	render_card()
+	pass
+	#render_card()
 
 func render_card():
-	if(is_flipped):
+	if(is_flipped):		
 		texture_normal=front_texture #show front texture if flipped
 	else:
 		texture_normal=back_texture	
@@ -26,5 +27,6 @@ func _process(delta):
 	pass
 
 
-func _on_pressed():
-	print("pressed card")
+func _on_pressed():	
+	print_debug("pressed card")
+	
