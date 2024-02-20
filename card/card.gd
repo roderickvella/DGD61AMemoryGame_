@@ -6,6 +6,8 @@ var back_texture: Texture #texture for the back side
 var is_flipped = false #flag to check if the card is flipped
 var is_clickable =true #flag to control if the card can be clicked
 
+signal card_flipped #signal emitted when teh card is flipped
+
 # Called when the node enters the scene tree for the first time.
 func _ready():	
 	render_card()
@@ -27,5 +29,9 @@ func _process(delta):
 
 
 func _on_pressed():	
-	print_debug("pressed card")
+	print_debug("broadcast signal to interested parties")
+	if(is_clickable):
+		emit_signal("card_flipped",self) #emit the signal indicating that this card
+		#has been flipped
+	
 	
